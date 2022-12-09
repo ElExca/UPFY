@@ -6,6 +6,7 @@ import { UserProvider } from './context/UserContext.jsx';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Register from "./containers/Register/Register.jsx";
 import Player from "./containers/Player/Player.jsx";
+import Admin from "./containers/Admin/Admin.jsx";
 
 class App extends Component {
   render() {
@@ -13,9 +14,10 @@ class App extends Component {
         <BrowserRouter>
             <UserProvider>
                 <Routes>
-                    <Route path="/" element={<Player></Player>}></Route>
-                    <Route path="/login" element={<Login></Login>}></Route>
+                    <Route path="/" element={<Login></Login>}></Route>
+                    <Route path="/player" element={<Player></Player>}></Route>
                     <Route path="/register" element={<Register></Register>}></Route>
+                    <Route path="/admin" element={<Admin></Admin>}></Route>
                 </Routes>
             </UserProvider>
         </BrowserRouter>
